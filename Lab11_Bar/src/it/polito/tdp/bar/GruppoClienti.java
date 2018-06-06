@@ -67,8 +67,7 @@ public class GruppoClienti {
 	public void setTavolo(Tavolo tavolo) {
 		this.tavolo = tavolo;
 	}
-	
-	
+
 	
 	
 }

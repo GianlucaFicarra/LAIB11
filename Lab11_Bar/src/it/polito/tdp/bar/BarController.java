@@ -9,7 +9,7 @@
 
 	public class BarController {
 
-		private Simulatore simulazione;
+		private Model model;
 		
 	    @FXML
 	    private ResourceBundle resources;
@@ -27,13 +27,10 @@
 	    void doSimulazione(ActionEvent event) {
 	    	txtResult.clear();
 	    	
-	    	Simulatore s= new Simulatore();
-			
-			s.init();
-			s.run();
-			
-			txtResult.appendText(String.format("Arrivati clienti: %d\nClienti soddisfatti: %d\nClienti Insoddisfatti: %d",
-					s.getNumero_totale_client(), s.getNumero_clienti_soddisfatti(), s.getNumero_clienti_insoddisfatti()));
+	    	String result = model.simula(); //avvia simulazione e ritorna il risultato in stringa
+	    	if (result != null && result != "")
+	    		this.txtResult.appendText(result);
+	    	
 	    }
 
 	    @FXML
@@ -43,8 +40,9 @@
 
 	    }
 
-		public void setModel(Simulatore model) {
-			this.simulazione=model;
+		public void setModel(Model model) {
+			
+			this.model = model;
 			
 		}
 	    

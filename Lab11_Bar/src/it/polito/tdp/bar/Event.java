@@ -11,7 +11,6 @@ public class Event implements Comparable<Event> {
 
 	private int  minuti; //min quando si verifica simulazione
 	private EventType tipo ; //tipo di simulazione
-	
 	private GruppoClienti gruppo;
 
 	
@@ -41,6 +40,7 @@ public class Event implements Comparable<Event> {
 	public int compareTo(Event other) {
 		return this.minuti-other.getMinuti() ;
 	}
+	
 	
 	
 }
