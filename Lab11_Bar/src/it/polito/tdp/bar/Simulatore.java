@@ -171,6 +171,7 @@ public class Simulatore {
 		return disponibili;
 	}
 	
+	
 	private Tavolo tavoloPiuPiccolo(List<Tavolo> tavoliDisponibili) {
 		int min = Integer.MAX_VALUE;
 		Tavolo tavolo = null;
